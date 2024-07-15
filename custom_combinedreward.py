@@ -84,6 +84,7 @@ class LogCombinedReward(RewardFunction):
             for func in self.reward_functions
         ]
         self.prev_rewards = rewards
+        # self.prev_weighted = np.dot(self.reward_weights, rewards)
 
         return float(np.dot(self.reward_weights, rewards))
 
